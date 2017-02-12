@@ -17,5 +17,6 @@
                 }
             }
         ?>
+        <link rel="icon" href="<?php echo resource_url("img/logo.ico"); ?>"/>
     </head>
     <body>

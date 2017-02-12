@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class user extends CI_Controller 
+class User extends CI_Controller 
 {
     public function __construct()
     {
@@ -13,8 +13,13 @@ class user extends CI_Controller
         $data = [
             'title' => "Home"
         ];
-        $this->load->view('includes/header', $data);
-        $this->load->view('test');
-        $this->load->view('includes/footer');
+        if(isset($_SESSION['logged_in'])){
+            $this->load->view('includes/header', $data);
+            $this->load->view('home/home');
+            $this->load->view('includes/footer');
+        } else {
+            redirect(base_url());
+        }
+       
     }
 }
