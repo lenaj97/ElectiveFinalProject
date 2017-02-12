@@ -53,7 +53,7 @@ $(function() {
     });
     
     var username_error, email_error;
-    $("#register-user").change(function(){
+    $("#register-user").keyup(function(){
         username_error = false;
         var data = {
             username: $("#register-user").val()
@@ -77,7 +77,7 @@ $(function() {
         })
     });
     
-    $("#register-email").change(function(){
+    $("#register-email").keyup(function(){
         email_error = false;
         var data = {
             email: $("#register-email").val()
@@ -104,6 +104,7 @@ $(function() {
     $('#register-submit').click(function(e) { 
         "use strict"
         var form = $("#register-form");
+        console.log(username_error);
         var formData = new FormData(document.querySelector("#register-form"));
         var error = false;
         var type_error = [];
@@ -124,7 +125,7 @@ $(function() {
                 );
                 error = true;
             }
-            if(username_error == "Username Exists"){
+            if(username_error){
                 $("#register-user").notify(
                     "Username already exist", 
                     { position:"right" }
@@ -132,7 +133,7 @@ $(function() {
                 type_error.push(username_error);
             }
             
-            if(email_error == "Email has been used"){
+            if(email_error){
                 $("#register-email").notify(
                     "Email has been used", 
                     { position:"right" }
