@@ -65,4 +65,17 @@ class Login extends CI_Controller
         ];
         $this->user_model->register_user($data);
     }
+    
+    public function logout()
+    {
+        $array_items = array('username', 'logged_in');
+        $this->session->unset_userdata($array_items);
+        $this->session->sess_destroy();
+        
+        $this->load->helper('cookie');
+        $cookie = $this->input->cookie('ci_session');
+        $this->input->set_cookie('ci_session', $cookie, "1"); //0 mins
+        
+        redirect(); 
+    }
 }
