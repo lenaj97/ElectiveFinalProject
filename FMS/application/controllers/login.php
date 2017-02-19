@@ -14,11 +14,12 @@ class Login extends CI_Controller
         $header = [
             'title' => "Login",
             'css' => [
-                "login.css"]
+                "css/login.css"
+            ]
         ];
         $footer = [
             'scripts' => [
-                "login.js"
+                "js/login.js"
             ]
         ];
         if(isset($_SESSION['logged_in'])){
@@ -71,10 +72,6 @@ class Login extends CI_Controller
         $array_items = array('username', 'logged_in');
         $this->session->unset_userdata($array_items);
         $this->session->sess_destroy();
-        
-        $this->load->helper('cookie');
-        $cookie = $this->input->cookie('ci_session');
-        $this->input->set_cookie('ci_session', $cookie, "1"); //0 mins
         
         redirect(); 
     }
