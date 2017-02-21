@@ -1,24 +1,25 @@
 $(function() {
     $('#login-form-link').click(function(e) {
         "use strict"
+        e.preventDefault();
     	$("#login-form").delay(100).fadeIn(100);
  		$("#register-form").fadeOut(100);
 		$('#register-form-link').removeClass('active');
-		$(this).addClass('active');
-		e.preventDefault();
+		$(this).addClass('active');		
 	});
     
 	$('#register-form-link').click(function(e) {
         "use strict"
+        e.preventDefault();
 		$("#register-form").delay(100).fadeIn(100);
  		$("#login-form").fadeOut(100);
 		$('#login-form-link').removeClass('active');
-		$(this).addClass('active');
-		e.preventDefault();
+		$(this).addClass('active');		
 	});
     
     $('#login-submit').click(function(e) { 
         "use strict"
+        e.preventDefault();
         var form = $("#login-form");
         var formData = new FormData(document.querySelector("#login-form"));
         if($("#username").val() == "" || $("#password").val() == ""){
@@ -39,6 +40,7 @@ $(function() {
                         $.notify("Login successful, Redirecting...");
                         $("#username").val("");
                         $("#password").val("");
+                        e.target.setAttribute("disabled", true);
                         setTimeout(function() {
                             window.location = "http://omega.com/user/home";
                         }, 3000);                       
@@ -47,9 +49,7 @@ $(function() {
                     }
                 }
             })
-        }
-        e.preventDefault();
-        
+        }        
     });
     
     var username_error, email_error;
@@ -103,6 +103,7 @@ $(function() {
     
     $('#register-submit').click(function(e) { 
         "use strict"
+        e.preventDefault();
         var form = $("#register-form");
         console.log(username_error);
         var formData = new FormData(document.querySelector("#register-form"));
@@ -155,6 +156,7 @@ $(function() {
                             form.find("input[type=text]").val("");
                             form.find("input[type=email]").val("");
                             form.find("input[type=password]").val("");
+                            e.target.setAttribute("disabled", true);
                             $.notify.defaults({ className: "success" });   
                             $.notify("Registration successful, Redirecting...");
                             setTimeout(function() {
@@ -166,8 +168,6 @@ $(function() {
                     }
                 })
             }
-        }
-        e.preventDefault();
-        
+        }        
     });
 });
