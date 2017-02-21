@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login extends CI_Controller 
+class Login extends MY_Controller 
 {
     public function __construct()
     {
@@ -11,23 +11,17 @@ class Login extends CI_Controller
 
 	public function index()
 	{
-        $header = [
+        $this->dataView = [
             'title' => "Login",
             'css' => [
                 "css/login.css"
-            ]
-        ];
-        $footer = [
+            ],
             'scripts' => [
                 "js/login.js"
             ]
         ];
         if(isset($_SESSION['logged_in'])){
             redirect(base_url('user/home'));
-        } else {
-            $this->load->view('includes/header', $header);
-            $this->load->view('login/index');
-            $this->load->view('includes/footer', $footer);
         }
         
 	}
@@ -72,7 +66,6 @@ class Login extends CI_Controller
         $array_items = array('username', 'logged_in');
         $this->session->unset_userdata($array_items);
         $this->session->sess_destroy();
-        
-        redirect(); 
+        redirect(base_url()); 
     }
 }
