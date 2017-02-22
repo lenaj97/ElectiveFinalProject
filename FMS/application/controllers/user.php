@@ -6,6 +6,9 @@ class User extends MY_Controller
     public function __construct()
     {
         parent::__construct();
+        if(!isset($_SESSION['logged_in'])){
+            redirect(base_url());
+        }
     }
     
     public function home()
@@ -24,10 +27,7 @@ class User extends MY_Controller
                 "vendors/AdminLTE/dist/js/app.min.js",
                 "vendors/AdminLTE/dist/js/demo.js"
             ]
-        ];
-        if(!isset($_SESSION['logged_in'])){
-            redirect(base_url());
-        }
+        ];       
        
     }
     

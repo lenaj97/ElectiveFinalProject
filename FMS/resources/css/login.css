@@ -7,6 +7,19 @@
 
 /* LOGIN STYLE*/
 
+/*Removes yellow auto complete color in chrome and other browsers*/
+@-webkit-keyframes autofill {
+    to {
+        color: #666;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/Roboto/Roboto 500.ttf')  format('truetype');
