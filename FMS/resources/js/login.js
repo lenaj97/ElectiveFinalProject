@@ -1,4 +1,5 @@
 $(function() {
+    var base_url = window.location.origin;
     $('#login-form-link').click(function(e) {
         "use strict"
         e.preventDefault();
@@ -26,7 +27,7 @@ $(function() {
              $.notify("Please provide values to all fields");
         } else {
             $.ajax({
-                url: "http://omega.com/login/authenticate",
+                url: base_url+"/login/authenticate",
                 type: "POST",
                 data: formData,
                 dataType: "json",
@@ -42,7 +43,7 @@ $(function() {
                         $("#password").val("");
                         e.target.setAttribute("disabled", true);
                         setTimeout(function() {
-                            window.location = "http://omega.com/user/home";
+                            window.location =  base_url+"/user/home";
                         }, 3000);                       
                     } else {
                         $.notify("Wrong Username or Password");
@@ -59,7 +60,7 @@ $(function() {
             username: $("#register-user").val()
         };
         $.ajax({
-            url: "http://omega.com/login/check",
+            url:  base_url+"/login/check",
             type: "POST",
             data: data,
             cache: false,
@@ -83,7 +84,7 @@ $(function() {
             email: $("#register-email").val()
         };
         $.ajax({
-            url: "http://omega.com/login/check",
+            url:  base_url+"/login/check",
             type: "POST",
             data: data,
             cache: false,
@@ -143,7 +144,7 @@ $(function() {
             } 
             if(error == false && type_error.length < 1){
                 $.ajax({
-                    url: "http://omega.com/login/register",
+                    url:  base_url+"/login/register",
                     type: "POST",
                     data: formData,
                     dataType: "json",
@@ -160,7 +161,7 @@ $(function() {
                             $.notify.defaults({ className: "success" });   
                             $.notify("Registration successful, Redirecting...");
                             setTimeout(function() {
-                                window.location = "http://omega.com/user/home";
+                                window.location =  base_url+"/user/home";
                             }, 3000);                       
                         } else {
                             $.notify("Wrong Username or Password");

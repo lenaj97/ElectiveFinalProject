@@ -19,13 +19,14 @@ class User extends MY_Controller
                 "vendors/AdminLTE/dist/css/AdminLTE.min.css",
                 "vendors/AdminLTE/dist/css/skins/_all-skins.min.css",
                 "vendors/ionicons/css/ionicons.min.css",
-                "css/home.css"
+                "css/home.css",
+                "css/filemanager.css"
             ],
             'scripts' => [
                 "vendors/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js",
                 "vendors/AdminLTE/plugins/fastclick/fastclick.js",
                 "vendors/AdminLTE/dist/js/app.min.js",
-                "vendors/AdminLTE/dist/js/demo.js"
+                "js/home.js"
             ]
         ];       
        

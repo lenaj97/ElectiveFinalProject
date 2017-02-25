@@ -18,7 +18,6 @@ class MY_Controller extends CI_Controller
 
 	public function _output($output)
 	{
-        if(!$output){
             $render = NULL;
 
             // Set the content view
@@ -32,15 +31,13 @@ class MY_Controller extends CI_Controller
                 : FALSE;
 
             // Render the layout view
-            if ($this->layoutView) {
+            if ($yield) {
                 $render = $this->load->view('layouts/' . $this->layoutView, ['yield' => $yield], TRUE);
             } else {
-                $render = $yield;
+                $render = $output;
             }
 
             echo $render;
-        } else {
-            echo $output;
-        }
+        
 	}
 }
