@@ -7,7 +7,7 @@
 
 /* LOGIN STYLE*/
 
-/*Removes yellow auto complete color in chrome and other browsers*/
+/*Removes auto complete color in chrome and other browsers*/
 @-webkit-keyframes autofill {
     to {
         color: #666;

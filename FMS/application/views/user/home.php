@@ -1,6 +1,13 @@
-<body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
+<?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<body class="hold-transition skin-blue sidebar-collapse sidebar-mini" >
     <!-- Site wrapper -->
-    <div class="wrapper">
+    <div id="loading">
+        <img class="img-responsive" src="<?php echo resource_url("img/loading-files.gif"); ?>" alt="loading" />
+        <h3 class="loading-msg">Kicking @ss..</h3>
+    </div>
+    <div class="wrapper" id="page-content">
         <header class="main-header">
         <!-- Logo -->
             <a href="<?php echo base_url('user/home');?>" class="logo">
@@ -121,13 +128,13 @@
             <section class="sidebar">
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu">
-                    <li class="treeview">
+                    <li>
                         <a href="#">
-                            <i class="fa fa-database fa-lg"></i> 
+                            <i class="fa fa-clipboard fa-lg"></i> 
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="treeview active">
+                    <li class="active">
                         <a href="#">
                             <i class="fa fa-cloud fa-lg"></i>
                             <span>Cloud Drive</span>
@@ -145,6 +152,12 @@
                             <span>Feedback</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-gears fa-lg"></i> 
+                            <span>Settings</span>
+                        </a>
+                    </li>
                 </ul>
             </section>
             <!-- /.sidebar -->
@@ -154,17 +167,69 @@
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-
-            </section>
-
-            <!-- Main content -->
-            <section class="content">
-
-            </section>
-            <!-- /.content -->
+            <div class="col-sm-2 file-tree">
+                <div class="page-title">
+                    <p>Cloud Drive</p>
+                </div>
+                <ul class="file-tree-menu list-unstyled">
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-folder"></i> <span>Folder</span>
+                        </a>
+                        <ul class="treeview-menu list-unstyled">
+                            <li><a href="../../index.html"><i class="fa fa-folder"></i> Dashboard v1</a></li>
+                            <li><a href="../../index2.html"><i class="fa fa-folder"></i> Dashboard v2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2">
+                <div class="filemanager">
+                    
+                <ol class="breadcrumb">
+                    <li class="active">Folder</li>
+                </ol>
+                <ul class="data animated">
+                    <li class="folders">
+                        <a href="" class="folders">
+                            <span class="icon folder full"></span>
+                            <span class="name">sample</span>
+                            <span class="details">3 items</span>
+                        </a>
+                    </li>
+                    <li class="folders">
+                        <a href="" class="folders">
+                            <span class="icon folder full"></span>
+                            <span class="name">Folder</span>
+                            <span class="details">3 items</span>
+                        </a>
+                    </li>
+                    <li class="files">
+                        <a href="" class="files">
+                            <span class="icon file f-txt">.txt</span>
+                            <span class="name">File</span>
+                            <span class="details">4 GB</span>
+                        </a>
+                    </li>
+                    <li class="files">
+                        <a href="" class="files">
+                            <span class="icon file f-pdf">.pdf</span>
+                            <span class="name">File</span>
+                            <span class="details">2 GB</span>
+                        </a>
+                    </li>
+                    <li class="files">
+                        <a href="" class="files">
+                            <span class="icon file f-css">.css</span>
+                            <span class="name">File</span>
+                            <span class="details">34 KB</span>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
         </div>
+
         <!-- /.content-wrapper -->
 
         <footer class="main-footer">

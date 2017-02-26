@@ -1,5 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #292b30;
+    overflow-y: hidden;
+}
+
 .logo-mini {
     height: 50px;
     width: 50px;
-    padding: 8px
+    padding: 8px;
+    background-color: #222d32;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#page-content {
+    display: none;
+}
+
+.loading-msg {
+    margin-top: -10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span:not(.pull-right),
+.sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
+    width: 100px;
+    left: 50px;
+}
+
+.sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span {
+    padding: 12px 5px 12px 10px;
+    background-color: inherit;
+}
+
+.file-tree {
+    background-color: #e1e5eb;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    border-right: 1px solid #eee;
+}
+
+.page-title {
+    background-color: #8bbfd4;
+    color: #eee;
+    margin: 0 -15px 0 -15px;
+}
+
+.page-title > p {
+    text-align: center;
+    padding: 6px;
+}
+
+.file-tree-menu > li > .treeview-menu {
+    padding-left: 10px;
 }
