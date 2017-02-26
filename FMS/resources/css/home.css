@@ -45,15 +45,28 @@ body {
     background-color: inherit;
 }
 
-.file-tree {
-    background-color: #e1e5eb;
-    position: fixed;
-    top: 50px;
-    bottom: 0;
-    display: block;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    border-right: 1px solid #eee;
+.content-header > .breadcrumb {
+    left: 0;
+    font-size: 15px;
+    color: #eee;
+}
+
+.content-header > .menu-list {
+    float: right;
+    font-size: 16px;
+}
+
+.content-header > .menu-list > span{
+    margin-right: 10px;
+}
+
+.content-header > .menu-list > .view-options{
+    display: inline;
+}
+
+.content-header > .menu-list > .view-options > span{
+    font-size: 18px;
+    margin-left: 5px;
 }
 
 .page-title {
@@ -63,10 +76,28 @@ body {
 }
 
 .page-title > p {
-    text-align: center;
     padding: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    
 }
 
-.file-tree-menu > li > .treeview-menu {
+.file-tree {
+    background-color: #e1e5eb;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    border-right: 1px solid #eee;
+    font-size: 14px;
+}
+
+.treeview-menu > li {
     padding-left: 10px;
 }
+
+
+

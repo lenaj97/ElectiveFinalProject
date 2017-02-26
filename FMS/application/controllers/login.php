@@ -14,9 +14,11 @@ class Login extends MY_Controller
         $this->dataView = [
             'title' => "Login",
             'css' => [
+                "vendors/AdminLTE/plugins/pace/pace.min.css",
                 "css/login.css"
             ],
             'scripts' => [
+                "vendors/AdminLTE/plugins/pace/pace.min.js",
                 "js/login.js"
             ]
         ];
