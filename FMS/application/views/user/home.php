@@ -171,61 +171,87 @@
                 <div class="page-title">
                     <p>Cloud Drive</p>
                 </div>
-                <ul class="file-tree-menu list-unstyled">
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-folder"></i> <span>Folder</span>
-                        </a>
-                        <ul class="treeview-menu list-unstyled">
-                            <li><a href="../../index.html"><i class="fa fa-folder"></i> Dashboard v1</a></li>
-                            <li><a href="../../index2.html"><i class="fa fa-folder"></i> Dashboard v2</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="tree">                
+                    <ul class="list-unstyled">
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-folder"></i> <span>Folder</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            
+                            <ul class="treeview-menu list-unstyled">
+                                <li><a href="#"><i class="fa fa-folder"></i> Subfolder1</a></li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-folder"></i> Subfolder2
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="treeview-menu list-unstyled">
+                                        <li><a href="#"><i class="fa fa-folder"></i> Subfolder3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>                
+                </div>
             </div>
             <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2">
                 <div class="filemanager">
-                    
-                <ol class="breadcrumb">
-                    <li class="active">Folder</li>
-                </ol>
-                <ul class="data animated">
-                    <li class="folders">
-                        <a href="" class="folders">
-                            <span class="icon folder full"></span>
-                            <span class="name">sample</span>
-                            <span class="details">3 items</span>
-                        </a>
-                    </li>
-                    <li class="folders">
-                        <a href="" class="folders">
-                            <span class="icon folder full"></span>
-                            <span class="name">Folder</span>
-                            <span class="details">3 items</span>
-                        </a>
-                    </li>
-                    <li class="files">
-                        <a href="" class="files">
-                            <span class="icon file f-txt">.txt</span>
-                            <span class="name">File</span>
-                            <span class="details">4 GB</span>
-                        </a>
-                    </li>
-                    <li class="files">
-                        <a href="" class="files">
-                            <span class="icon file f-pdf">.pdf</span>
-                            <span class="name">File</span>
-                            <span class="details">2 GB</span>
-                        </a>
-                    </li>
-                    <li class="files">
-                        <a href="" class="files">
-                            <span class="icon file f-css">.css</span>
-                            <span class="name">File</span>
-                            <span class="details">34 KB</span>
-                        </a>
-                    </li>
-                </ul>
+                    <section class="content-header">
+                        <ol class="breadcrumb">
+                            <li class="active"><a href=""><i class="fa fa-cloud"></i></a></li>
+                        </ol>
+                        <div class="menu-list">
+                            <span> <i class="fa fa-plus"></i> New Folder</span>
+                            <span> <i class="glyphicon glyphicon-open-file"></i> File Upload</span>
+                            <span> <i class="fa fa-cloud-upload"></i> Folder Upload</span>
+                            <div class="view-options">
+                                <span class="fa fa-th-list"></span>
+                                <span class="fa fa-th"></span>
+                            </div>                            
+                        </div>                      
+                    </section>
+                    <ul class="data animated">
+                        <li class="folders">
+                            <a href="" class="folders">
+                                <span class="icon folder full"></span>
+                                <span class="name">sample</span>
+                                <span class="details">3 items</span>
+                            </a>
+                        </li>
+                        <li class="folders">
+                            <a href="" class="folders">
+                                <span class="icon folder full"></span>
+                                <span class="name">Folder</span>
+                                <span class="details">3 items</span>
+                            </a>
+                        </li>
+                        <li class="files">
+                            <a href="" class="files">
+                                <span class="icon file f-txt">.txt</span>
+                                <span class="name">File</span>
+                                <span class="details">4 GB</span>
+                            </a>
+                        </li>
+                        <li class="files">
+                            <a href="" class="files">
+                                <span class="icon file f-pdf">.pdf</span>
+                                <span class="name">File</span>
+                                <span class="details">2 GB</span>
+                            </a>
+                        </li>
+                        <li class="files">
+                            <a href="" class="files">
+                                <span class="icon file f-css">.css</span>
+                                <span class="name">File</span>
+                                <span class="details">34 KB</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

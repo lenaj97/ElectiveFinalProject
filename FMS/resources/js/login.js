@@ -1,5 +1,6 @@
 $(function() {
     var base_url = window.location.origin;
+    $(document).ajaxStart(function() { Pace.restart(); });
     $('#login-form-link').click(function(e) {
         "use strict"
         e.preventDefault();
