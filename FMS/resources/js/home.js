@@ -22,4 +22,25 @@ $(function() {
         }
         e.stopPropagation();
     });
+    
+    //Toggle Thumbnail/List View
+    $('#ThumbnailToggle').click(function(e) {
+        "use strict"
+        e.preventDefault();
+        document.getElementById("thumbnail").style.display = "block";
+        $("#thumbnail").delay(400).fadeIn(200);
+        document.getElementById("list").style.display = "none";
+        $("#list").fadeOut(300);
+
+	});
+    
+     $('#ListToggle').click(function(e) {
+        "use strict"
+        e.preventDefault();          
+        document.getElementById("list").style.display = "block";
+        $("#list").delay(400).fadeIn(200);
+        document.getElementById("thumbnail").style.display = "none";
+        $("#thumbnail").fadeOut(300);
+        
+	});
 });

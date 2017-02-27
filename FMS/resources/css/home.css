@@ -8,6 +8,7 @@ body {
     overflow-y: hidden;
 }
 
+/* Loading script */
 .logo-mini {
     height: 50px;
     width: 50px;
@@ -34,6 +35,7 @@ body {
     font-style: italic;
 }
 
+/* Sidebar menu*/
 .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span:not(.pull-right),
 .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
     width: 100px;
@@ -45,30 +47,63 @@ body {
     background-color: inherit;
 }
 
+/* Breadcrumb */
 .content-header > .breadcrumb {
     left: 0;
-    font-size: 15px;
-    color: #eee;
+    top: -5px;
+    float: left;
+    display: inline;
+    position: relative;
+    font-size: 16px;
+    padding-left: 0px;
 }
 
 .content-header > .menu-list {
     float: right;
-    font-size: 16px;
+    font-size: 16px;    
+    display: inline;    
 }
 
-.content-header > .menu-list > span{
+.content-header > .menu-list > a {  
+    float: left;
+    display: inherit;
     margin-right: 10px;
+    cursor: pointer;
+    color: inherit;    
+}
+
+.content-header > .menu-list > a:hover {  
+    color: #959798;    
+}
+
+.content-header > .menu-list > a > form > label {
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.content-header > .menu-list > a > form > label > input{
+    display: none;
+    cursor: pointer;
 }
 
 .content-header > .menu-list > .view-options{
     display: inline;
 }
 
-.content-header > .menu-list > .view-options > span{
+.content-header > .menu-list > .view-options > a{
+    color: inherit;
+}
+
+.content-header > .menu-list > .view-options > a:hover{
+    color: #959798;
+}
+
+.content-header > .menu-list > .view-options > a > span{
     font-size: 18px;
     margin-left: 5px;
 }
 
+/* File tree view */
 .page-title {
     background-color: #8bbfd4;
     color: #eee;
@@ -99,5 +134,82 @@ body {
     padding-left: 10px;
 }
 
+/* Content script */
+div.content-wrapper > .col-sm-10 {
+    padding-right: 10px;
+}
+
+.box {
+    display: none;
+    margin-top: 40px;
+    -webkit-animation: showSlowlyElement 200ms; /* Chrome, Safari, Opera */
+	animation: showSlowlyElement 200ms; /* Standard syntax */
+}
+
+.box-content > td > span > i {
+    font-size: 13px;
+}
+
+/* When screen width is below 991px */
+@media (max-width: 991px) {
+    
+  body {
+    font-size: 11px;
+  }
+  
+  .content-header > .breadcrumb {
+    position: relative;
+    left: 0;
+    top: -9px;
+    float: left;
+    background: transparent;
+    font-size: 12px;
+    padding-left: 0px;
+  }
+  
+  .content-header > .breadcrumb li:before {
+    color: #97a0b3;
+  }
+  
+  .content-header > .menu-list {
+    font-size: 12px;
+    margin-left: 2px;
+  }
+  
+  .content-header > .menu-list > .view-options > a > span {
+    font-size: 14px;
+    margin-left: 3px;
+  }
+  
+  .page-title {
+    background-color: #8bbfd4;
+    color: #eee;
+    margin: 0 -15px 0 -15px;
+    }
+
+  .page-title > p {
+    padding: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .file-tree {
+    font-size: 12px;
+  }
+
+  .treeview-menu > li {
+    padding-left: 7px;
+  }
+  
+  .box {
+    margin-top: 30px;
+  }
+
+  .box-content > td > span > i {
+    font-size: 12px;
+  }  
+  
+}
 
 

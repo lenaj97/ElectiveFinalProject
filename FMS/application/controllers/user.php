@@ -34,4 +34,27 @@ class User extends MY_Controller
        
     }
     
+    public function dashboard()
+    {
+        $this->dataView = [
+            'title' => "Dashboard",
+            'css' => [
+                "vendors/AdminLTE/dist/css/AdminLTE.min.css",
+                "vendors/AdminLTE/dist/css/skins/_all-skins.min.css",
+                "vendors/AdminLTE/plugins/pace/pace.min.css",
+                "vendors/ionicons/css/ionicons.min.css",
+                "css/home.css",
+                "css/dashboard.css"
+            ],
+            'scripts' => [
+                "vendors/AdminLTE/plugins/pace/pace.min.js",
+                "vendors/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js",
+                "vendors/AdminLTE/plugins/fastclick/fastclick.js",
+                "vendors/AdminLTE/dist/js/app.min.js",
+                "js/home.js"
+            ]
+        ];       
+       
+    }
+    
 }

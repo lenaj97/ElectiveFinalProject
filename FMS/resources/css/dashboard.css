@@ -1,0 +1,26 @@
+.info {
+	text-align:center;
+}
+
+.prof {
+	background-color:transparent;
+}
+
+.h5 {
+	font-weight:bold;
+	font-size: 15px;
+}
+
+.dashboard-user {
+    height: auto;
+    width: auto;
+}
+
+.dashboard-img {
+    border-radius: 100px;
+}
+
+.h2 {
+	font-weight:bold;
+	font-size: 25px;
+}
