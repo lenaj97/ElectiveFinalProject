@@ -76,7 +76,7 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> 'mysql:host=localhost;dbname=fms',
 	'hostname' => '',
-	'username' => 'Admin',
+	'username' => 'root',
 	'password' => '123',
 	'database' => '',
 	'dbdriver' => 'pdo',
