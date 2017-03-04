@@ -153,7 +153,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?php echo base_url("user/settings");?>">
                             <i class="fa fa-gears fa-lg"></i> 
                             <span>Settings</span>
                         </a>
