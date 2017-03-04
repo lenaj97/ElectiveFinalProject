@@ -28,7 +28,8 @@ class User extends MY_Controller
                 "vendors/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js",
                 "vendors/AdminLTE/plugins/fastclick/fastclick.js",
                 "vendors/AdminLTE/dist/js/app.min.js",
-                "js/home.js"
+                "js/home.js",
+                "js/filemanager.js"
             ]
         ];       
        

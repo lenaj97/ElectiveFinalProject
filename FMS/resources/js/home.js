@@ -34,7 +34,7 @@ $(function() {
 
 	});
     
-     $('#ListToggle').click(function(e) {
+    $('#ListToggle').click(function(e) {
         "use strict"
         e.preventDefault();          
         document.getElementById("list").style.display = "block";
@@ -43,4 +43,5 @@ $(function() {
         $("#thumbnail").fadeOut(300);
         
 	});
+    
 });

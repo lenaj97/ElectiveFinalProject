@@ -58,6 +58,7 @@ body {
     padding-left: 0px;
 }
 
+/* Menu */
 .content-header > .menu-list {
     float: right;
     font-size: 16px;    
@@ -73,7 +74,7 @@ body {
 }
 
 .content-header > .menu-list > a:hover {  
-    color: #959798;    
+    color: #727373;    
 }
 
 .content-header > .menu-list > a > form > label {
@@ -90,12 +91,12 @@ body {
     display: inline;
 }
 
-.content-header > .menu-list > .view-options > a{
+.content-header > .menu-list > .view-options > a {
     color: inherit;
 }
 
 .content-header > .menu-list > .view-options > a:hover{
-    color: #959798;
+    color: #727373;
 }
 
 .content-header > .menu-list > .view-options > a > span{
@@ -132,6 +133,10 @@ body {
 
 .treeview-menu > li {
     padding-left: 10px;
+}
+
+.treeview-menu > li > a:hover {
+    color: #375967 !important;
 }
 
 /* Content script */

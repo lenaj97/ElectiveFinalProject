@@ -103,7 +103,8 @@ class User_model extends CI_Model
         $Userdata = [
             "username" => $data["username"],
             "password" => $data["password"],
-            "email"    => $data["email"]
+            "email"    => $data["email"],
+            "root"     => $data["root"]
         ];
         $error = 0;
         $counter = 0;

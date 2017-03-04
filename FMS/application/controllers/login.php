@@ -53,14 +53,23 @@ class Login extends MY_Controller
     
     public function register()
     {
+       
+        $username = $this->input->post('register-user');
+        $email = $this->input->post('register-email');
         $password = $this->input->post('register-pass');
+        
         $hash = password_hash($password, PASSWORD_BCRYPT, array("cost" => 10));
+        $maindir_hash = md5($username);
+        
         $data = [
-            "username" => $this->input->post('register-user'),
-            "email"    => $this->input->post('register-email'),
-            "password" => $hash
+            "username" => $username,
+            "email"    => $email,
+            "password" => $hash,
+            "root"     => $maindir_hash
         ];
-        $this->user_model->register_user($data);
+        $this->user_model->register_user($data);        
+        $this->load->model('user/ftp_model');
+        $this->ftp_model->new_user($data['username']);
     }
     
     public function logout()
